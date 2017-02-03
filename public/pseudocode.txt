@@ -1,0 +1,66 @@
+Questions for Tuesday class:
+
+1. How to get jquery keyframe to update dynamically (up and down animation)
+2. do i want to save the queries and make a tab for recently searched?
+3. is using the "set time out fx" to show the results in top right corner a good or bad choice?
+4. on "delete" keypress, make the filtered list reload according to updated query
+5. put on loader screen
+
+
+
+
+--------------------------------
+
+
+1. $.get data from 10 different news sources (make sure to store at least 100 headlines)
+- question: how to avoid duplicate headlines in the DB? (every time i refresh they are stored again)
+- would it be more useful just to store headlines in an array or JS object so it can be refreshed every time the page reloads?
+
+
+2. store titles and article descriptions in a firebase databaseURL
+
+
+3. when user enters query in box: live query, meaning if i just type "T",
+titles will show any title including "T"
+
+- When user enters new character into search bar, .headlines is emptied.
+
+- Title animations - could be cascading across screen or the words in sentence could be animated up and down separately on their own
+
+4. the word the user entered will be in red. the background is black. text is white/blue.
+
+5. Displays the total number of titles showing
+
+6. Use javascript to better estimate the lenght of each title by finding .length() of the title and then multiplying
+that by the average pixel width of a character. then set the margins for the css animations based on this number.
+- question: how to communicate between css animation and javascript
+
+
+7. how to add FireBase ...
+- trending queries (last 10 things ppl have searched for)
+- whenever someon clicks headline, save that in headlines - latest headlines viewed
+-
+
+
+
+1. SEARCH FUNCTIONALITY
+- HOW TO LIVE SEARCH (EACH CHARACTER THAT IS TYPED)
+- HOW TO LIVE UPDATE THE ARTICLE COUNT
+- on each key down, query firebase
+
+*** filter
+- use the filter fx to loop thru  on jquery.change () - to see every time the value changes in search box
+- use a reg ex to search each headline and see if it matches input from search bar
+- if it does match then return true
+- if i use .filter, it will create a new array of only items that return true
+- using jquery, empty the current <ul> and append all new array items as <li>
+
+
+**
+
+2. DATABASE VS ARRAY/OBJECT
+
+3. HOW TO SEARCH FIREBASE USING REG.EX.
+
+4. STYLING
+- HOW TO HIGHLIGHT JUST THE SEARCH QUERY

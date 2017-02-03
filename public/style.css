@@ -1,0 +1,272 @@
+
+@font-face {
+  font-family: nimbus;
+  src: url("NimbusMonoLOT-Regular.otf");
+}
+
+@font-face{
+  font-family: tex;
+  src: url("texgyreheros-regular.otf");
+}
+
+body{
+  background-color: black;
+  color: white;
+  font-family: nimbus;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+form{
+  position: absolute;
+  top: 0;
+  padding: 0 30px;
+  left: 0;
+  font-family: tex;
+  line-height: 62px;
+}
+
+#nav h3 {
+  background-color: yellow;
+  color: black;
+  display: inline;
+  margin-right: 40px;
+}
+
+#nav{
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: yellow;
+  position: fixed;
+  padding: 10px;
+  height: 50px;
+}
+
+.floatLeft{
+  float: left;
+  width: 50%;
+}
+
+.floatRight{
+  float: right;
+  clear: both;
+  width: 50%;
+  text-align: right;
+  padding: 10px 30px;
+    font-family: tex;
+    line-height: 24px;
+}
+
+form textarea{
+  display: inline;
+  border-width: 2px;
+}
+
+#textarea{
+  left: 270px;
+  top: 12px;
+  position: absolute;
+}
+/*
+#message-form{
+  padding: 10px;
+}*/
+
+:focus{
+  outline: none;
+  background-color: yellow;
+  color: black;
+}
+
+.form-group{
+    float: left;
+    padding-right: 50px;
+}
+
+ul{
+  width: 500%;
+  padding-top: 50px;
+  animation-name: moveUp;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moveUp {
+  0% {margin-top: 0;}
+  50% {margin-top: -1600px;}
+  100% {margin-top: 0px;}
+}
+
+@keyframes moveLeft {
+  0% {margin-left: 0; color: white;}
+  50% {margin-left: -900px; color: blue;}
+  100% {margin-left: 0px; color: white;}
+}
+
+@keyframes moveRight {
+  0% {margin-left: -900px; color: white;}
+  50% {margin-left: 0px; color: blue;}
+  100% {margin-left: -900px; color: white;}
+}
+
+ul li:nth-child(odd) {
+  /*color: red;*/
+  animation-name: moveLeft;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+ul li:nth-child(even) {
+  margin-left: -900px;
+  animation-name: moveRight;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.headlines li{
+  font-size: 4em;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.highlight {
+  color: red;
+}
+
+.loader {
+    background-color: white;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    overflow-y: hidden;
+    background-image: url(ajax_loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.em {
+    height: 2.5em;
+    width: 2.5em;
+    margin-top: -10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#trumpstats {
+    display: block;
+    background-color: red;
+    width: 43%;
+    position: absolute;
+    top: 70px;
+    padding: .3em;
+    text-align: center;
+    right: 0;
+    font-family: tex;
+    display: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited{
+  color: inherit;
+}
+
+li:hover{
+  background-color: yellow;
+  color: white;
+}
+
+@media screen and (max-width: 700px){
+  form {
+    position: relative;
+    padding: 0px;
+  }
+
+  /*body{
+    background-color: blue;
+  }*/
+
+  .floatLeft{
+    float: none;
+    width: 100vw;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .floatRight{
+    width: 100vw;
+    float: none;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  #nav{
+    height: 130px;
+    padding: 10px;
+    width: 100vw;
+    padding: 0px;
+  }
+
+  .em{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  .headlines li {
+    font-size: 2em;
+  }
+
+  #textarea {
+    left: 240px;
+  }
+
+  #trumpstats {
+    width: 100vw;
+    top: 130px;
+  }
+
+  ul{
+    padding-top: 130px;
+    width: 800%;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  #textarea {
+    left: 210px;
+  }
+
+  #nav h3 {
+    background-color: yellow;
+    color: black;
+    display: inline;
+    margin-right: 0px;
+    font-size: 1em;
+  }
+
+  .em {
+    top: 80px;
+    right: 10px;
+  }
+
+  #trumpstats{
+    width: 99vw;
+  }
+}

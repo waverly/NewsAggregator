@@ -1,0 +1,7 @@
+https://newsapi.org
+api key:
+24471d8efdd04ef4aa01fd04efb28328
+
+
+cnn api key:
+jg7ptpf9mhzj5fq4xe4z4ufv
